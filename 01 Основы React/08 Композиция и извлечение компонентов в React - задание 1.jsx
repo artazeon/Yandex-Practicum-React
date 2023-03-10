@@ -1,8 +1,8 @@
-function ProductPrice(props) {
+function ProductPrice({priceInfo, ...props}) {
   return (
     <div className="main__container">
-      <p className="main__text">{`Цена: ${props.priceInfo.price} ${props.priceInfo.currency}.`}</p>
-      <p className="main__text">{`Налог: ${props.priceInfo.taxes}%`}</p>
+      <p className="main__text">{`Цена: ${priceInfo.price} ${priceInfo.currency}.`}</p>
+      <p className="main__text">{`Налог: ${priceInfo.taxes}%`}</p>
     </div>
   )
 } 
