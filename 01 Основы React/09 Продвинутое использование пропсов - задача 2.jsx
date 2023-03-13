@@ -24,7 +24,7 @@ const meals = [
 
 class App extends React.Component {
   randomMeal(arr) {
-   return arr[Math.floor(Math.random() * 6)]
+   return arr[Math.floor(Math.random() * (arr.length-1))]
   }
 
   render() {
