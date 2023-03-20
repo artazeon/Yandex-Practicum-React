@@ -20,10 +20,10 @@ const RepliedMessage = ({ message }) => {
 const Chat = ({ thread }) => {
   return (
     <div className='thread'>
-      {thread.map((el, index) => {
-        const rMessage = el.replyTo && thread.find(item => item.id === el.replyTo)
+      {thread.map((el,index) => {
+        const firstMessage = el.replyTo && thread.find(item => item.id === el.replyTo)
         return (
-        <Message message={el} repliedMessage={rMessage} key={index}/>
+        <Message message={el} repliedMessage={firstMessage} key={index}/>
         )
       })}
     </div>
